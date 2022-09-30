@@ -1,20 +1,19 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-// !STARTERCONF Change these default meta
 const defaultMeta = {
   title: 'MultiStep Form',
   siteName: 'MultiStep Form',
   description: 'MultiStep Form',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
-  url: 'https://tsnext-tw.thcl.dev',
+  url: 'https://mulitstep-form.vercel.app',
   type: 'website',
   robots: 'follow, index',
   /**
    * No need to be filled, will be populated with openGraph function
    * If you wish to use a normal image, just specify the path below
    */
-  image: 'https://tsnext-tw.thcl.dev/images/large-og.png',
+  image: 'https://mulitstep-form.vercel.app/images/large-og.png',
 };
 
 type SeoProps = {
@@ -34,7 +33,6 @@ export default function Seo(props: SeoProps) {
 
   // Use siteName if there is templateTitle
   // but show full title if there is none
-  // !STARTERCONF Follow config for opengraph, by deploying one on https://github.com/theodorusclarence/og
   // ? Uncomment code below if you want to use default open graph
   // meta['image'] = openGraph({
   //   description: meta.description,
@@ -69,11 +67,7 @@ export default function Seo(props: SeoProps) {
             property='og:publish_date'
             content={meta.date}
           />
-          <meta
-            name='author'
-            property='article:author'
-            content='Theodorus Clarence'
-          />
+          <meta name='author' property='article:author' content='Adham Tarek' />
         </>
       )}
 
@@ -98,7 +92,6 @@ type Favicons = {
   type?: string;
 };
 
-// !STARTERCONF this is the default favicon, you can generate your own from https://www.favicon-generator.org/ then replace the whole /public/favicon folder
 const favicons: Array<Favicons> = [
   {
     rel: 'apple-touch-icon',

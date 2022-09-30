@@ -8,7 +8,6 @@ export function openGraph({
   siteName,
   templateTitle,
   description,
-  // !STARTERCONF Or, you can use my server with your own logo.
   logo = 'https://og.<your-domain>/images/logo.jpg',
 }: OpenGraphType): string {
   const ogLogo = encodeURIComponent(logo);
